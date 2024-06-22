@@ -1,0 +1,63 @@
+sepa_rulebook_project/
+├── data/
+│   ├── old_version/202
+│   ├── new_version/2023
+│   └── impacts/results.pdf
+├── src/
+│   ├── parsers/
+│   ├── comparers/
+│   ├── analyzers/
+│   ├── models/
+│   └── utils/
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── script.js
+│   └── bar_chart.png
+│   └── pie_chart.png
+├── templates/
+│   ├── index.html
+│   └── result.html
+├── requirements.txt
+├── README.md
+├── main.py
+└── app.py
+
+
+------------------------------------------At present
+
+my_project/
+│
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── script.js
+│   └── bar_chart.png
+│   └── pie_chart.png
+│
+├── templates/
+│   ├── index.html
+│   └── results.html
+│
+├── data/
+│   ├── old_version/
+│   │   └── EPC115-06_2021_V1.0_pacs.008.001.02_Update.xsd
+│   ├── new_version/
+│   │   └── EPC115-06_2023_V1.0_pacs.008.001.08_Update.xsd
+│
+├── src/
+│   ├── parsers/
+│   │   └── parse_xsd.py
+│   ├── comparers/
+│   │   └── compare_elements.py
+│   ├── analyzers/
+│   │   └── impact_analyzer.py
+│   └── utils/
+│       └── openai_helper.py
+│
+├── app.py
+└── requirements.txt
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Regulatory Platform</title>
+</head>
+<body style="background-image: url('https://th.bing.com/th/id/R.90d220874168785f837802317b1333f9?rik=KZmpvDrJngNVBw&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2fb%2f8%2f7%2f512262.jpg&ehk=pfD5myRT6A3lglM%2b6%2bjtxl3RUcdOjpbArk3NbFa8NAM%3d&risl=&pid=ImgRaw&r=0'); background-size: cover;">
+
+<div class="header">Welcome to the Regulatory Platform</div> 
+
+<!-- <div class="label">Select Regulation</div> -->
+
+<div class="dropdown">
+    <button class="dropbtn" id="myDropdown">▼ Select Regulation</button>
+    <div class="dropdown-content">
+        <a href="#">▼ SEPA</a>
+        <a href="#">▼ SWIFT</a>
+        <a href="#">▼ DORA</a>-
+    </div>
+</div>
+
+<div class="button">
+    <button class="start-button" onclick="handleButtonClick()">Start Impact Analysis</button>
+</div>
+
+<!-- <script src="script.js"></script> -->
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<!-- <script src="{{ url_for('static', filename='js/script1.js') }}"></script> -->
+<!-- <script src="script1.js"></script> -->
+
+ <script>
+    function handleButtonClick() {
+    const dropdown = document.getElementById("myDropdown");
+    const selectedValue = dropdown.textContent;  // Use textContent to get the selected value
+    if (selectedValue === "▼ SEPA") {
+        console.log('sardar')
+        // Redirect to another webpage (e.g., "sepa.html")
+        window.location.href="static/sepa.html";
+    } else {
+        // Show an "Invalid input" message
+        alert("Invalid input. Please select SEPA.");
+    }
+  }
+
+ </script>
+
+</body>
+</html> 

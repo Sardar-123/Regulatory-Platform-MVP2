@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Impact Analysis</title>
+    <style>
+        body {text-align: center; margin-top: 50px;}
+        .container {display: flex; flex-direction: column; align-items: center;}
+        input, button {margin-top: 20px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Impact Analysis for {{ regulation }}</h1>
+        <form action="/analyze" method="post" enctype="multipart/form-data">
+            <label for="old_file">Upload Old Version XSD:</label>
+            <input type="file" name="old_file" id="old_file" required>
+            <label for="new_file">Upload New Version XSD:</label>
+            <input type="file" name="new_file" id="new_file" required>
+            <button type="submit">Analyze</button>
+        </form>
+    </div>
+</body>
+</html>

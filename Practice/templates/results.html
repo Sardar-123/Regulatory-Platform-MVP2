@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XSD Comparison Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Impact Analysis Results</h1>
+        
+        <div>
+            <h2>Change Type Distribution</h2>
+            <img src="{{ bar_chart_path }}" alt="Bar Chart">
+        </div>
+        
+        <div>
+            <h2>Change Type Distribution (Pie Chart)</h2>
+            <img src="{{ pie_chart_path }}" alt="Pie Chart">
+        </div>
+
+        <div>
+            <a href="/generate_reports" class="btn">Download Impact Analysis Report</a>
+        </div>
+
+        <div>
+            <a href="/generate_reports" class="btn">Download Test Scenarios Report</a>
+        </div>
+        
+        <a href="/" class="btn">Go Back</a>
+    </div>
+</body>
+</html>

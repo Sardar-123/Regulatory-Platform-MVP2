@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Impact Analysis Report</title>
+    <style>
+        body {text-align: center; margin-top: 50px;}
+        .container {display: flex; flex-direction: column; align-items: center;}
+        button {margin-top: 20px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Impact Analysis Report</h1>
+        <button onclick="window.location.href='/download/impact_analysis_report.txt'">Download IA Report</button>
+        <button onclick="window.location.href='/download/test_cases_report.txt'">Generate Test Cases using AI</button>
+        <canvas id="barChart"></canvas>
+        <canvas id="pieChart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Bar chart data and configuration
+        var barChartData = {
+            labels: ['Change 1', 'Change 2', 'Change 3'],
+            datasets: [{
+                label: 'Impact Level',
+                data: [10, 20, 30],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        var barChartConfig = {
+            type: 'bar',
+            data: barChartData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        var barChart = new Chart(
+            document.getElementById('barChart'),
+            barChartConfig
+        );
+
+        // Pie chart data and configuration
+        var pieChartData = {
+            labels: ['Change 1', 'Change 2', 'Change 3'],
+            datasets: [{
+                data: [10, 20, 30],
+                backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)'],
+                borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)'],
+                borderWidth: 1
+            }]
+        };
+
+        var pieChartConfig = {
+            type: 'pie',
+            data: pieChartData
+        };
+
+        var pieChart = new Chart(
+            document.getElementById('pieChart'),
+            pieChartConfig
+        );
+    </script>
+</body>
+</html>

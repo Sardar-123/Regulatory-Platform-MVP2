@@ -1,0 +1,5 @@
+Flask
+pandas
+Gemini API
+lxml
+matplotlib
